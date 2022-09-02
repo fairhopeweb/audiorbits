@@ -1,0 +1,17 @@
+{
+  "AppVersion": "1.0.0.0",
+  "Title": "AudioOrbits",
+  "Thumbnail": "lk1pbh04.jpg",
+  "Preview": "ole5r5le.gif",
+  "Desc": "Reacts to music by projecting the audio-spectrum onto the Orbits in form of color, saturation and brightness.",
+  "Author": "Hexxonite",
+  "License": "GPL v3",
+  "Contact": "https://github.com/rocksdanister/audiorbits",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--audio true",
+  "IsAbsolutePath": false,
+  "Id": null,
+  "Tags": null,
+  "Version": 0
+}
