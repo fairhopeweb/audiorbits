@@ -72,6 +72,23 @@ var weas = {
 	}
 };
 
+
+function livelyAudioListener(audioArray){
+	// check proof
+	if (!audioArray) return;
+	if (audioArray.length != 128) {
+		print("audioListener: received invalid audio data array. Length: " + audioArray.length);
+		return;
+	}
+	let audBuff = new Float64Array(audioArray);
+	// post web worker task
+	weas.weasWorker.postMessage({
+		settings: weas.settings,
+		last: weas.lastAudio,
+		audio: audBuff.buffer
+	}, [audBuff.buffer]);
+}
+
 $(() => {
 	// if wallpaper engine context given, listen
 	if (window.wallpaperRegisterAudioListener) {

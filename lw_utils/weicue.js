@@ -259,6 +259,7 @@ AAAASUVORK5CYII=
 
     // show a message by icue
     icueMessage: function (msg) {
+        /*
         $("#icueholder").css('opacity', 1);
         $("#icuetext").html(msg);
         $("#icueholder").fadeIn({ queue: false, duration: "slow" });
@@ -267,6 +268,7 @@ AAAASUVORK5CYII=
             $("#icueholder").fadeOut({ queue: false, duration: "slow" });
             $("#icueholder").animate({ top: "-120px" }, "slow");
         }, 10000);
+        */
     },
 
     // helper
@@ -352,7 +354,7 @@ AAAASUVORK5CYII=
         if (!self.injected) {
             self.injected = true;
             self.injectCSS();
-            self.injectHTML();
+            //self.injectHTML();
         }
 
         self.showWaiting();

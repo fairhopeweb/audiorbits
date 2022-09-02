@@ -5,7 +5,7 @@
 var WarnHelper = {
 
     animationSeconds: 1,
-    waitSeconds: 10,
+    waitSeconds: 3,
     injected: false,
 
     injectCSS: function() {
