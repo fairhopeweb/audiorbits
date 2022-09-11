@@ -1142,34 +1142,59 @@ $(() => {
 	}
 });
 
-function livelyPropertyListener(name, val)
-{
+function livelyPropertyListener(name, val) {
 	var self = audiOrbits;
 	var sett = self.settings;
-		
-	switch(name) {
-    case "parallax_option":
-		sett.parallax_option = val;
-      break; 
-    case "parallax_strength":
-		sett.parallax_strength = val;
-      break; 
-    case "default_brightness":
-		sett.default_brightness = val;
-      break; 
-    case "default_saturation":
-		sett.default_saturation = val;
-      break;
-    case "zoom_val":
-		sett.zoom_val = val;
-      break;
-    case "rotation_val":
-		sett.rotation_val = val;
-      break; 
-  }
+
+	switch (name) {
+		case "parallax_option":
+			sett.parallax_option = val;
+			break;
+		case "parallax_strength":
+			sett.parallax_strength = val;
+			break;
+		case "default_brightness":
+			sett.default_brightness = val;
+			break;
+		case "default_saturation":
+			sett.default_saturation = val;
+			break;
+		case "zoom_val":
+			sett.zoom_val = val;
+			break;
+		case "rotation_val":
+			sett.rotation_val = val;
+			break;
+		case "main_color":
+			document.body.style.backgroundColor = val;
+			break;
+		case "color_mode":
+			sett.color_mode = val;
+			self.initHueValues();
+			break;
+		case "user_color_a":
+			tmp = hexToRgb(val)
+			sett.user_color_a = `${tmp.r} ${tmp.g} ${tmp.b}`;
+			self.initHueValues();
+			break;
+		case "user_color_b":
+			tmp = hexToRgb(val)
+			sett.user_color_b = `${tmp.r} ${tmp.g} ${tmp.b}`;
+			self.initHueValues();
+			break;
+	}
 
 	// fix for centered camera on Parallax "none"
 	if (sett.parallax_option == 0) self.mouseX = self.mouseY = 0;
 	// set Cursor for "fixed" parallax mode
 	if (sett.parallax_option == 3) self.positionMouseAngle(sett.parallax_angle);
+}
+
+function hexToRgb(hex) {
+	var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	return result ? {
+		r: parseInt(result[1], 16),
+		g: parseInt(result[2], 16),
+		b: parseInt(result[3], 16)
+	} : null;
 }
