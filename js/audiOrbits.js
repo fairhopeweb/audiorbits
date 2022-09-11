@@ -1141,3 +1141,35 @@ $(() => {
 		audiOrbits.initOnce();
 	}
 });
+
+function livelyPropertyListener(name, val)
+{
+	var self = audiOrbits;
+	var sett = self.settings;
+		
+	switch(name) {
+    case "parallax_option":
+		sett.parallax_option = val;
+      break; 
+    case "parallax_strength":
+		sett.parallax_strength = val;
+      break; 
+    case "default_brightness":
+		sett.default_brightness = val;
+      break; 
+    case "default_saturation":
+		sett.default_saturation = val;
+      break;
+    case "zoom_val":
+		sett.zoom_val = val;
+      break;
+    case "rotation_val":
+		sett.rotation_val = val;
+      break; 
+  }
+
+	// fix for centered camera on Parallax "none"
+	if (sett.parallax_option == 0) self.mouseX = self.mouseY = 0;
+	// set Cursor for "fixed" parallax mode
+	if (sett.parallax_option == 3) self.positionMouseAngle(sett.parallax_angle);
+}
