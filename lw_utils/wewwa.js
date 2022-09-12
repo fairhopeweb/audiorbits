@@ -185,6 +185,7 @@ wewwApp.AddMenu = (lang) => {
 
     // create root menu
     var menu = ce("div");
+    menu.style.visibility = "hidden";
     menu.classList.add("wewwaMenu");
     // create preview img wrap
     var preview = ce("img");
@@ -362,6 +363,7 @@ wewwApp.AddMenu = (lang) => {
 
     // create icon for opening & closing the menu
     var icon = ce("div");
+    icon.style.visibility = "hidden";
     icon.classList.add("wewwaIcon");
     icon.addEventListener("click", () => {
         $(".wewwaMenu, .wewwaIcon").toggleClass("open");
