@@ -41,10 +41,10 @@ var wewwApp = wewwApp || {};
 
 wewwApp.Init = () => {
     wewwApp.LoadProjectJSON((proj) => {
-        if (proj.type != "web") {
-            console.log("Error! Loaded project.json is not a web Wallpaper. How did this happen? Aborting...");
-            return;
-        }
+        // if (proj.type != "web") {
+        //     console.log("Error! Loaded project.json is not a web Wallpaper. How did this happen? Aborting...");
+        //     return;
+        // }
         wewwApp.project = proj;
         wewwApp.LoadStorage();
         wewwApp.AddStyle();
