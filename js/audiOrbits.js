@@ -662,7 +662,7 @@ var audiOrbits = {
 		var self = audiOrbits;
 		var sett = self.settings;
 		var cobj = self.colorObject = self.getColorObject();
-		print("initHueValues: a=" + cobj.hsla + ", b=" + cobj.hslb, true);
+		//print("initHueValues: a=" + cobj.hsla + ", b=" + cobj.hslb, true);
 		for (var s = 0; s < sett.num_subsets_per_level; s++) {
 			var col = Math.random();
 			switch (sett.color_mode) {

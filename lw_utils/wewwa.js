@@ -714,7 +714,7 @@ wewwApp.stopAudioInterval = () => {
 
 if (window.wallpaperRegisterAudioListener) console.log("WEWWA: detected wallpaper engine - Standby.");
 else {
-    console.log("WEWWA: wallpaper engine not detected - Init!");
+    //console.log("WEWWA: wallpaper engine not detected - Init!");
     // define audio listener first, so we dont miss when it gets registered.
     window.wallpaperRegisterAudioListener = function (callback) {
         // set callback to be called later with analysed audio data
