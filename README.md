@@ -1,4 +1,7 @@
-### TODO
+### AudiOrbits
+Reacts to music by projecting the audio-spectrum onto the Orbits in form of color, saturation and brightness.
+
+[Download](https://github.com/rocksdanister/audiorbits/releases)
 
 ### Dependencies / Libraries
 - [we_utils](https://github.com/hexxone/we_utils) diverse utilities
